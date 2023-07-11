@@ -209,7 +209,6 @@
  *               available on win32 platform only and needs to link with
  *               iphlpapi.lib.
  ***********************************************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -325,6 +324,8 @@ u_short local_port = 0;                         /* option 'p' */
 int f_hold_session = 0;                         /* option 'P' */
 
 char *telnet_command = "telnet %h %p";
+
+typedef void (*__sighandler_t)(int);
 
 /* utiity types, pair holder of number and string */
 typedef struct {
